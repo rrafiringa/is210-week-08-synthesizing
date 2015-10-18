@@ -87,8 +87,6 @@ if NAME.strip():
             Total:                ${:,}
         """.format(NAME, PRINC, YEARS, PREQ, TOTAL)
         print REPORT
-    else:
-        TOTAL = None
 else:
     MSG.append('Error: No name entered.')
 
