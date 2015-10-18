@@ -76,7 +76,7 @@ if NAME.strip():
 
     if PRINCFLAG and YEARSFLAG and PREQFLAG:
         RATE = Decimal(TABLE[COL1][COL2][COL3][1])/100
-        TOTAL = int(round(PRINC * (1 + Decimal(RATE)/12)**(12*YEARS)))
+        TOTAL = int(round(PRINC * ((1 + Decimal(RATE / 12)) ** (12 * YEARS))))
         REPORT = """
         Loan Report for: {}
         ---------------------------------------------
@@ -87,6 +87,8 @@ if NAME.strip():
             Total:                ${:,}
         """.format(NAME, PRINC, YEARS, PREQ, TOTAL)
         print REPORT
+    else:
+        TOTAL = None
 else:
     MSG.append('Error: No name entered.')
 
