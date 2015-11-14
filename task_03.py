@@ -99,6 +99,7 @@ RATE = TABLE[COL1][COL2][COL3][1]
 
 TOTAL = loan_calc(PRINC, RATE, YEARS)
 
+FINAL = TOTAL
 if TOTAL is not None:
     FINAL = '${:,}'.format(TOTAL)
 
