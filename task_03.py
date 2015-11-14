@@ -63,11 +63,13 @@ while not PRINC or int(PRINC) <= 0:
     PRINC = raw_input(QUES[1]).strip()
     if not PRINC.isdigit():
         print 'Invalid principal amount'
+        continue
 
 while not YEARS:
     YEARS = raw_input(QUES[2]).strip()
     if not YEARS.isdigit() or int(YEARS) not in range(1, 31):
-        print 'Entry must be a number between 1 and 30.'
+        print 'Year value must be between 1 and 30.'
+        continue
 
 while not PREQ:
     PREQ = str(raw_input(QUES[3])[:1]).upper()
